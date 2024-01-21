@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entry to the page</title>
+    <style>
+        body{
+            backface-visibility: visible;
+        
+            letter-spacing: .2rem;
+            text-shadow: 1px 1px 1px#2b35c4, -1px 1px 1px #000, -1px 1px 1px yellow;
+            margin: 5%;
+            font-size: 20px;
+            color: rgb(188, 208, 214);
+
+        }
+        .normal {
+  letter-spacing: normal;
+  object-position: 50% 50%;
+
+}
+.em-wide {
+  letter-spacing: 0.4em;
+  font-size: 20px;
+}
+.em-wider {
+  letter-spacing: 1em;
+  font-size: 25px;
+}
+.em-tight {
+  letter-spacing: -0.10em;
+}
+.px-wide {
+  letter-spacing: 6px;
+  font-size: 20px;
+}
+div {
+  width: 40px;
+  height: 40px;
+  background: #2b35c4;
+  margin: 20px;
+  border: px solid;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+  animation: move 5000ms infinite alternate ease-in-out;
+box-shadow: 1px 1px 1px #0000ff;
+  offset-path: path("M20,20 C20,50 180,-10 180,20");
+}
+div:nth-child(1) {
+  offset-rotate: auto;
+  color: black;
+}
+div:nth-child(2) {
+  offset-rotate: auto 90deg;
+  color: blueviolet;
+  border-radius: 20%;
+  box-shadow: 1px 1px 1px #000, -1px 1px 1px #0000ff;
+}
+div:nth-child(3) {
+  offset-rotate: 30deg;
+}
+
+@keyframes move {
+  100% {
+    offset-distance: 100%;
+  }
+}
+#motion-demo {
+  offset-path: path("M20,20 C20,100 200,0 200,100");
+  animation: move 3000ms infinite alternate ease-in-out;
+  width: 40px;
+  height: 40px;
+  background: cyan;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>World</h1>
+    
+<p class="em-wide">letter spacing</p>
+<div></div>
+<p class="em-wider">letter spacing</p>
+
+<div></div>
+<p class="em-tight">letter spacing</p>
+<div></div>
+<p class="px-wide">letter spacing</p>
+<div>1</div>
+<div id="motion-demo"></div>
+<p class="normal">letter spacing</p>
+<br>
+<a href="History.html"><h2>Go back to the beginning.</h2></a>
+</body>
+</html>
